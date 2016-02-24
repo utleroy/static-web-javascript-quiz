@@ -1,17 +1,17 @@
-// -------User input variables
+// ------variables to identify text fields and submit btn in html
 
 var char = document.getElementById('char') 
 var height = document.getElementById('height')
 var btn = document.getElementById('btn')
 
-btn.addEventListener("click", getValues);
 
+//-------function to obtain the user imput values
 function getValues () {
   var cv = char.value
   var hv = height.value
   checkInput(cv, hv);
 }
-
+//-------function to validate the fields are entered fully and correctly
 function checkInput (cv, hv) {
   console.log(char, height);
   if (!cv || !hv) {
@@ -21,7 +21,7 @@ function checkInput (cv, hv) {
   }
 }
 
-
+//-------function to build the program
 function buildObj(cv, hv) {
   var treeObj = {
   c: cv,
@@ -30,6 +30,7 @@ function buildObj(cv, hv) {
  growTree(treeObj);
 }
 
+//-------function to execute the program
 function growTree(Obj) {
  var h = Obj.h;
 for (var i = 0; i < Obj.h; i++) {
@@ -42,11 +43,28 @@ for (var i = 0; i < Obj.h; i++) {
 
 
 
+//-------event listener (listens for btn click)
+btn.addEventListener("click", getValues);
+
+
+
+
+
+
+
+
+
+
+
 
 // ----*----
 // ---***---
 // --*****--
 // -*******-
 // *********
+
+
+// Initial algebra
+// 2X + 1
 
 
